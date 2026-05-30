@@ -6,6 +6,9 @@ const app = express();
 app.use(express.json());
 const mongoose = require('./db');
 const User = require('./models/User');
+const cors = require('cors');
+
+app.use(cors());
 
 // const server = http.createServer((req,res)=>{
 

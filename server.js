@@ -30,7 +30,7 @@ app.get('/add',(req,res)=>{
 })
 
 
-app.use('/user',require('./routes/userRoutes'));
+// app.use('/user',require('./routes/userRoutes'));
 
 app.listen('3000', () => {
   console.log(`Example app listening on port 3000`);

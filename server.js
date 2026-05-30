@@ -1,47 +1,47 @@
-// const http = require('http');
-// require('dotenv').config();
-// const addController = require('./controllers/addController');
-// const express = require('express');
-// const app = express();
-// app.use(express.json());
-// const mongoose = require('./db');
-// const User = require('./models/User');
+const http = require('http');
+require('dotenv').config();
+const addController = require('./controllers/addController');
+const express = require('express');
+const app = express();
+app.use(express.json());
+const mongoose = require('./db');
+const User = require('./models/User');
 
-// // const server = http.createServer((req,res)=>{
+// const server = http.createServer((req,res)=>{
 
-// //     res.writeHead(200,{'Content-Type':'json'});
-// //     res.write(JSON.stringify({message: "Hello World"}));
-// // })
+//     res.writeHead(200,{'Content-Type':'json'});
+//     res.write(JSON.stringify({message: "Hello World"}));
+// })
 
-// app.get('/hello',(req,res)=>{
-//     res.send('Hello');
-// });
+app.get('/hello',(req,res)=>{
+    res.send('Hello');
+});
 
-// app.use('/addop/',require('./routes/addRoute'));
+app.use('/addop/',require('./routes/addRoute'));
 
-// app.use('/calcop/',require('./routes/calcRoute'));
-
-
-// // app.get('/add',(req,res)=>{
-// //     let a = parseInt(req.query.a);
-// //     let b = parseInt(req.query.b);
-// //     let sum = add(a,b);
-// //     res.send(`The sum of ${a} and ${b} is ${sum}`);
-// // })
+app.use('/calcop/',require('./routes/calcRoute'));
 
 
-// app.use('/user',require('./routes/userRoutes'));
+app.get('/add',(req,res)=>{
+    let a = parseInt(req.query.a);
+    let b = parseInt(req.query.b);
+    let sum = add(a,b);
+    res.send(`The sum of ${a} and ${b} is ${sum}`);
+})
 
-// app.listen('3000', () => {
-//   console.log(`Example app listening on port 3000`);
-// });
 
-// // server.on('error',(err)=>{
-// //     console.log(err);
-// // })
-// // server.listen("3000",()=>{
-// //     console.log("Server is running on port 3000");
-// // })
+app.use('/user',require('./routes/userRoutes'));
+
+app.listen('3000', () => {
+  console.log(`Example app listening on port 3000`);
+});
+
+// server.on('error',(err)=>{
+//     console.log(err);
+// })
+// server.listen("3000",()=>{
+//     console.log("Server is running on port 3000");
+// })
 
 
 
@@ -49,17 +49,17 @@
 //     return a+b;
 // }
 
-const http = require('http');
-const greet = require('./greet');
+// const http = require('http');
+// const greet = require('./greet');
 
 
 
-console.log(greet('Paavan'));
+// console.log(greet('Paavan'));
 
-const {add, sub}= require('./calc')
+// const {add, sub}= require('./calc')
  
-console.log(add(1, 2));
-console.log(sub(1, 2));
+// console.log(add(1, 2));
+// console.log(sub(1, 2));
 
 
 

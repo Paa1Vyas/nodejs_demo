@@ -14,7 +14,7 @@ const User = require('./models/User');
 // })
 
 app.get('/hello',(req,res)=>{
-    res.send('Hello');
+    res.send('Hello '+req.query.name);
 });
 
 app.use('/addop/',require('./routes/addRoute'));

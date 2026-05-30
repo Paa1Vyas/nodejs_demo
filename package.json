@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo Build completed"
+  },
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "dotenv": "^17.4.2",

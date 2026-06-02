@@ -34,10 +34,13 @@ app.get('/add',(req,res)=>{
 
 
 // app.use('/user',require('./routes/userRoutes'));
+// Change this line to dynamically accept Render's port, defaulting to 3000 locally
+const PORT = process.env.PORT || 3000;
 
-app.listen('3000', () => {
-  console.log(`Example app listening on port 3000`);
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`);
 });
+
 
 // server.on('error',(err)=>{
 //     console.log(err);
